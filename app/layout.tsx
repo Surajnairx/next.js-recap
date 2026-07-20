@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import Header from "../components/header";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -31,21 +32,9 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <div className=" min-h-dvh bg-zinc-200 text-zinc-950 flex flex-col px-20">
-          <header className="flex h-14 items-center justify-between border-b bg-white px-4 sm:px-6">
-            <Link href="/" className="flex items-center gap-3 font-semibold">
-              <Image src="/next.svg" alt="" width={89} height={18} priority />
-            </Link>
+          
+        <Header/>
 
-            <nav className="flex items-center gap-4 text-sm font-medium text-zinc-600">
-              <Link href="/" className="hover:text-zinc-950">
-                Home
-              </Link>
-
-              <Link href="/posts" className="hover:text-zinc-950">
-                Posts
-              </Link>
-            </nav>
-          </header>
           <div className="mx-auto flex flex-1 w-full flex-col justify-between  border-0 bg-white text-black">
             <main className=" px-4 py-8 sm:px-6 sm:py-10">{children}</main>
 
