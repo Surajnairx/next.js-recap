@@ -1,11 +1,13 @@
 import React from 'react'
 
 function footer() {
-  return (
-     <footer className="flex h-14 items-center border-t border-zinc-300 px-4 text-sm text-zinc-500 sm:px-6">
-              2026 Next Blog
-            </footer>
-  )
+   return (
+    <footer className="mt-auto border-t border-slate-200 bg-white">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-center px-6 text-sm text-slate-500">
+        <p>© 2026 Next Blog. All rights reserved.</p>
+      </div>
+    </footer>
+  );
 }
 
 export default footer
