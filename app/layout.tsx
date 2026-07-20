@@ -29,38 +29,32 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col"><div className="min-h-dvh bg-zinc-200 text-zinc-950">
-        <header className="flex h-14 items-center justify-between border-b border-zinc-200 px-4 sm:px-6">
-  <Link href="/" className="flex items-center gap-3 font-semibold">
-    <Image
-      src="/next.svg"
-      alt=""
-      width={89}
-      height={18}
-      priority
-    />
-  </Link>
+      <body className="min-h-full flex flex-col">
+        <div className=" min-h-dvh bg-zinc-200 text-zinc-950 flex flex-col px-20">
+          <header className="flex h-14 items-center justify-between border-b bg-white px-4 sm:px-6">
+            <Link href="/" className="flex items-center gap-3 font-semibold">
+              <Image src="/next.svg" alt="" width={89} height={18} priority />
+            </Link>
 
-  <nav className="flex items-center gap-4 text-sm font-medium text-zinc-600">
-    <Link href="/" className="hover:text-zinc-950">
-      Home
-    </Link>
+            <nav className="flex items-center gap-4 text-sm font-medium text-zinc-600">
+              <Link href="/" className="hover:text-zinc-950">
+                Home
+              </Link>
 
-    <Link href="/posts" className="hover:text-zinc-950">
-      Posts
-    </Link>
-  </nav>
-</header>
-  <div className="mx-auto flex min-h-dvh w-full flex-col border-x border-zinc-300 bg-white text-black">
-    <main className="flex-1 px-4 py-8 sm:px-6 sm:py-10">
-      {children}
-    </main>
+              <Link href="/posts" className="hover:text-zinc-950">
+                Posts
+              </Link>
+            </nav>
+          </header>
+          <div className="mx-auto flex flex-1 w-full flex-col justify-between  border-0 bg-white text-black">
+            <main className=" px-4 py-8 sm:px-6 sm:py-10">{children}</main>
 
-    <footer className="flex h-14 items-center border-t border-zinc-300 px-4 text-sm text-zinc-500 sm:px-6">
-      2026 Next Blog
-    </footer>
-  </div>
-</div></body>
+            <footer className="flex h-14 items-center border-t border-zinc-300 px-4 text-sm text-zinc-500 sm:px-6">
+              2026 Next Blog
+            </footer>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
