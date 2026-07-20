@@ -1,24 +1,38 @@
-import React from 'react'
 import Link from "next/link";
 import Image from "next/image";
-function header() {
+
+function Header() {
   return (
-  <header className="flex h-14 items-center justify-between border-b bg-white px-4 sm:px-6">
-            <Link href="/" className="flex items-center gap-3 font-semibold">
-              <Image src="/next.svg" alt="" width={89} height={18} priority />
-            </Link>
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/next.svg"
+            alt="Next Blog"
+            width={89}
+            height={18}
+            priority
+          />
+        </Link>
 
-            <nav className="flex items-center gap-4 text-sm font-medium text-zinc-600">
-              <Link href="/" className="hover:text-zinc-950">
-                Home
-              </Link>
+        <nav className="flex items-center gap-6 text-sm font-medium">
+          <Link
+            href="/"
+            className="transition-colors duration-200 hover:text-blue-600"
+          >
+            Home
+          </Link>
 
-              <Link href="/posts" className="hover:text-zinc-950">
-                Posts
-              </Link>
-            </nav>
-          </header>
-  )
+          <Link
+            href="/posts"
+            className="transition-colors duration-200 hover:text-blue-600"
+          >
+            Posts
+          </Link>
+        </nav>
+      </div>
+    </header>
+  );
 }
 
-export default header
+export default Header;
