@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "../components/header";
+import Footer from "../components/footer";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -38,9 +39,7 @@ export default function RootLayout({
           <div className="mx-auto flex flex-1 w-full flex-col justify-between  border-0 bg-white text-black">
             <main className=" px-4 py-8 sm:px-6 sm:py-10">{children}</main>
 
-            <footer className="flex h-14 items-center border-t border-zinc-300 px-4 text-sm text-zinc-500 sm:px-6">
-              2026 Next Blog
-            </footer>
+           <Footer/>
           </div>
         </div>
       </body>
