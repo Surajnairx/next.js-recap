@@ -1,10 +1,16 @@
+import { notFound } from 'next/dist/client/components/navigation'
 import React from 'react'
 
 async function page({params}: any) {
     const {id} = await params
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
     const post = await res.json()
-    console.log(res)
+    
+    if(!post.id){
+      notFound()
+    }
+
+
   return (
     <main className="min-h-screen bg-slate-100 py-12 px-6">
       <article className="mx-auto max-w-3xl rounded-xl bg-white p-8 shadow-lg">
